@@ -1,20 +1,21 @@
-var mysql = require("mysql");
+const mysql = require("mysql");
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 8080,
-  user: "root",
-  password: null,
-  database: "burgers_db"
-});
+// CONNECTION WITH JAWSDB FOR HEROKU
+var connection;
+if(process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+    connection = mysql.createConnection({
+        host: "localhost",
+        port: 8080,
+        user: "root",
+        password: "",
+        database: "burgers_db"
+    });
+}
 
+// CONNECT
+connection.connect();
 
-connection.connect(function (err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
-
+// EXPORT
 module.exports = connection;

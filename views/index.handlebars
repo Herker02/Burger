@@ -1,0 +1,47 @@
+<div class="container">
+    <img src="./assets/image/burger.png" id="burger-img" alt="burger-img">
+    <h1>Devour da Burger</h1>
+    <div class="row">
+        <div class="col text-left">
+            <div class="notDevoured">
+                <h2>Feast:</h2>
+                <ul class="dev">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burgers/burger-block devoured=false}}
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="col text-center">&nbsp;</div>
+        <div class="col text-right">
+            <div class="devoured">
+                <h2>Feasted Upon:</h2>
+                <ul class="notDev">
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>Order Up:</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="newBurger">Burger Name:</label>
+                    <input type="text" id="newBurger" name="name">
+                </div>
+                <button type="submit">Add Burger</button>
+            </form>
+        </div>
+    </div>
+</div>
