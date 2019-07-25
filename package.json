@@ -1,10 +1,11 @@
 {
   "name": "burger",
   "version": "1.0.0",
-  "description": "",
+  "description": "<p>\r This is a burger logger using MySQL, Node, Express, Handlebars and an ORM. It is designed using the MVC design pattern; uses Node and MySQL to query and route data in your app, and uses Handlebars to generate your HTML.\r </p>\r <p>\r Users of the app can create a burger and add it to a database, then devour the burger which updates the devoured state in the database. After updating the state, the DOM will be updated to display the results on the webpage.\r </p>",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,6 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mysql": "^2.17.1"
-  }
+  },
+  "devDependencies": {}
 }

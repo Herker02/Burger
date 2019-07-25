@@ -1,10 +1,10 @@
 <div class="container">
-    <img src="./assets/image/burger.png" id="burger-img" alt="burger-img">
+    <img src="./assets/img/burger.png" id="burger-img" alt="burger-img">
     <h1>Devour da Burger</h1>
     <div class="row">
         <div class="col text-left">
             <div class="notDevoured">
-                <h2>Feast:</h2>
+                <h2>DEVOUR ME:</h2>
                 <ul class="dev">
                     {{#each burgers}}
                     {{#unless devoured}}
@@ -17,7 +17,7 @@
         <div class="col text-center">&nbsp;</div>
         <div class="col text-right">
             <div class="devoured">
-                <h2>Feasted Upon:</h2>
+                <h2>DEVOURED ALREADY:</h2>
                 <ul class="notDev">
                     {{#each burgers}}
                     {{#if devoured}}
